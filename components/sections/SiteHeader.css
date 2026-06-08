@@ -1,0 +1,9 @@
+.site-header { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: saturate(180%) blur(10px); border-bottom: 1px solid var(--border); }
+.site-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 68px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+.site-header-brand { font-family: var(--font-display), sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--text); }
+.site-header-brand:hover { text-decoration: none; }
+.site-header-nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.site-header-link { padding: 8px 12px; border-radius: 8px; color: var(--text); font-weight: 500; font-size: .96rem; }
+.site-header-link:hover { background: var(--surface); color: var(--primary); text-decoration: none; }
+.site-header-cta { white-space: nowrap; }
+@media (max-width: 720px) { .site-header-inner { justify-content: center; } .site-header-nav { order: 3; width: 100%; justify-content: center; } }

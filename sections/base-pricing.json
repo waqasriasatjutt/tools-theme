@@ -1,0 +1,7 @@
+{
+  "name": "Pricing",
+  "slug": "base-pricing",
+  "category": "Base • Conversion",
+  "sequence": 50,
+  "description": "Three pricing tiers with a feature list and a call-to-action each."
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Contact form",
+  "slug": "base-contact",
+  "category": "Base • Contact",
+  "sequence": 90,
+  "description": "A name / email / message form alongside your contact details."
+}

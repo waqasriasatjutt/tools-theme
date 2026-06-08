@@ -1,0 +1,20 @@
+{
+  "name": "base-theme",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Base — a Websites Portal theme written entirely in React (JSX). components/sections/*.jsx are the source of truth; `npm run build:sections` renders them to sections/* which the portal imports as editable drag-drop blocks. Fork it and add your own components.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build:sections": "node scripts/build-sections.mjs"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.23.1"
+  }
+}

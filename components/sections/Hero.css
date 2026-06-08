@@ -1,0 +1,8 @@
+.hero { padding: clamp(48px, 8vw, 96px) 0 clamp(56px, 9vw, 104px); background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 6%, var(--bg)), var(--bg)); }
+.hero-inner { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(28px, 5vw, 56px); align-items: center; }
+.hero-title { margin-bottom: 16px; }
+.hero-text { max-width: 560px; }
+.hero-actions { margin-top: 28px; }
+.hero-media { aspect-ratio: 4 / 3; border-radius: var(--radius); background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 22%, var(--bg)), color-mix(in srgb, var(--accent) 18%, var(--bg))); border: 1px solid var(--border); overflow: hidden; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 860px) { .hero-inner { grid-template-columns: 1fr; } .hero-media { aspect-ratio: 16 / 9; } }

@@ -1,0 +1,7 @@
+{
+  "name": "FAQ",
+  "slug": "base-faq",
+  "category": "Base • Content",
+  "sequence": 70,
+  "description": "Accordion of questions and answers — native <details>, no JavaScript."
+}

@@ -1,0 +1,8 @@
+.faq-container { max-width: 820px; }
+.faq-list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q { cursor: pointer; list-style: none; padding: 18px 0; font-weight: 600; font-size: 1.05rem; display: flex; justify-content: space-between; gap: 16px; }
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::after { content: "+"; color: var(--primary); font-weight: 700; flex: none; }
+.faq-item[open] .faq-q::after { content: "\2013"; }
+.faq-a { margin: 0 0 18px; color: var(--muted); }

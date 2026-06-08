@@ -1,0 +1,5 @@
+.cta-band { display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap; background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 55%, var(--accent))); color: #fff; border-radius: var(--radius); padding: clamp(28px, 5vw, 48px); }
+.cta-title { color: #fff; margin: 0 0 8px; }
+.cta-text { margin: 0; color: color-mix(in srgb, #fff 88%, transparent); max-width: 560px; }
+.cta-btn { background: #fff; color: var(--primary); }
+.cta-btn:hover { background: color-mix(in srgb, #fff 92%, var(--primary)); }

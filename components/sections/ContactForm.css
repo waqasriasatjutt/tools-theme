@@ -1,0 +1,7 @@
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 56px); align-items: start; }
+.contact-intro .lead { margin-top: 12px; }
+.contact-list { list-style: none; padding: 0; margin: 24px 0 0; display: flex; flex-direction: column; gap: 12px; }
+.contact-list li { display: flex; flex-direction: column; }
+.contact-label { font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.contact-form button { margin-top: 4px; }
+@media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }

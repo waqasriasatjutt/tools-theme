@@ -1,0 +1,7 @@
+{
+  "name": "Site footer",
+  "slug": "base-footer",
+  "category": "Base • Layout",
+  "sequence": 100,
+  "description": "Multi-column footer with link lists, brand line and a copyright bar."
+}

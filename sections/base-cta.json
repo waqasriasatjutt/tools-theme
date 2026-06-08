@@ -1,0 +1,7 @@
+{
+  "name": "Call to action",
+  "slug": "base-cta",
+  "category": "Base • Conversion",
+  "sequence": 80,
+  "description": "A full-width band with a heading, a line of text and a button."
+}

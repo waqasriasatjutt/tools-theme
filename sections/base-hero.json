@@ -1,0 +1,7 @@
+{
+  "name": "Hero",
+  "slug": "base-hero",
+  "category": "Base • Hero",
+  "sequence": 20,
+  "description": "Headline, supporting text, two buttons and a media panel."
+}

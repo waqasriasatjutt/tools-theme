@@ -1,0 +1,5 @@
+.service { display: flex; flex-direction: column; gap: 10px; }
+.service-title { margin-bottom: 2px; }
+.service-text { margin: 0; flex: 1; }
+.service-link { font-weight: 600; color: var(--primary); }
+.service-link:hover { text-decoration: underline; }

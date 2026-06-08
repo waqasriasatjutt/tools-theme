@@ -1,0 +1,76 @@
+/* Generic "tool" shell — meant to be re-used by other tool sections (Base64, URL encoder, …) */
+.tool-section { padding: clamp(28px, 5vw, 56px) 0; }
+.tool-head { text-align: center; margin: 0 0 28px; }
+.tool-title { margin: 0 0 8px; }
+.tool-sub { margin: 0 auto; max-width: 640px; color: var(--muted); }
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+@media (max-width: 760px) {
+  .tool-grid { grid-template-columns: 1fr; }
+}
+
+.tool-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: color-mix(in srgb, var(--bg) 92%, var(--text) 4%);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.tool-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tool-textarea {
+  width: 100%;
+  min-height: 260px;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 12px;
+  border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  border-radius: calc(var(--radius) - 6px);
+  background: var(--bg);
+  color: var(--text);
+}
+.tool-textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+.tool-output { background: color-mix(in srgb, var(--bg) 90%, var(--primary) 4%); }
+
+.tool-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* tiny status text next to copy button */
+.jf-status {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.jf-status.is-ok { color: var(--primary); }
+
+.jf-error {
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  background: color-mix(in srgb, #ef4444 10%, var(--bg));
+  border: 1px solid color-mix(in srgb, #ef4444 35%, transparent);
+  border-radius: calc(var(--radius) - 6px);
+  color: #b91c1c;
+  font-size: 0.9rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}

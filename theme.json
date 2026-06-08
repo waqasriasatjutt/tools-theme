@@ -1,0 +1,21 @@
+{
+  "name": "Tools",
+  "slug": "tools-theme",
+  "version": "1.0.0",
+  "description": "Theme for tools.way4tech.com — interactive client-side tool sections (JSON formatter, Base64 encoder, URL encoder, etc.) as draggable blocks for the Websites Portal visual builder. Forked from theme_starter; each tool is a React component + sibling vanilla JS for runtime interactivity.",
+  "colors": {
+    "primary": "#2563eb",
+    "accent": "#0891b2",
+    "bg": "#ffffff",
+    "text": "#0f172a",
+    "muted": "#64748b"
+  },
+  "fonts": {
+    "body": "Inter",
+    "display": "Plus Jakarta Sans"
+  },
+  "extra_tokens": {
+    "radius": "14px",
+    "maxw": "1200px"
+  }
+}

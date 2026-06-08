@@ -1,0 +1,15 @@
+/* Preview stylesheet — loads the webfonts, the theme primitives (theme.css), and each
+   section's co-located CSS, so `npm run dev` renders the components with their styles.
+   Add an @import line here when you add a section .css. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
+@import "../theme.css";
+@import "../components/sections/SiteHeader.css";
+@import "../components/sections/Hero.css";
+@import "../components/sections/FeatureGrid.css";
+@import "../components/sections/Services.css";
+@import "../components/sections/Pricing.css";
+@import "../components/sections/Testimonials.css";
+@import "../components/sections/Faq.css";
+@import "../components/sections/Cta.css";
+@import "../components/sections/ContactForm.css";
+@import "../components/sections/SiteFooter.css";

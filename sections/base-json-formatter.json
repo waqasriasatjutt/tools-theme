@@ -1,0 +1,7 @@
+{
+  "name": "JSON formatter",
+  "slug": "base-json-formatter",
+  "category": "Base • Tools",
+  "sequence": 200,
+  "description": "Paste JSON in, get it pretty-printed or minified out. Client-side, no upload."
+}

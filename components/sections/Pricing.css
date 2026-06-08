@@ -1,0 +1,12 @@
+.pricing-grid { align-items: start; }
+.plan { display: flex; flex-direction: column; gap: 12px; position: relative; }
+.plan-featured { border-color: var(--primary); box-shadow: 0 16px 40px color-mix(in srgb, var(--primary) 16%, transparent); }
+.plan-badge { position: absolute; top: -12px; left: 26px; }
+.plan-name { margin: 0; }
+.plan-price { display: flex; align-items: baseline; gap: 4px; }
+.plan-amount { font-family: var(--font-display), sans-serif; font-size: 2.4rem; font-weight: 800; letter-spacing: -.02em; }
+.plan-period { color: var(--muted); font-weight: 600; }
+.plan-blurb { margin: 0; }
+.plan-features { list-style: none; padding: 0; margin: 6px 0 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.plan-features li { padding-left: 24px; position: relative; }
+.plan-features li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: 700; }
