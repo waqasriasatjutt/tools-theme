@@ -297,8 +297,14 @@
     previewBody = root.querySelector(".p2w-preview-body");
     previewTitle = root.querySelector(".p2w-preview-title");
     var previewClose = root.querySelector(".p2w-preview-close");
-    if (previewClose) previewClose.addEventListener("click", function () { previewModal.hidden = true; });
-    if (previewModal) previewModal.addEventListener("click", function (e) { if (e.target === previewModal) previewModal.hidden = true; });
+    // Defensive: make 100% sure the modal starts hidden no matter what CSS
+    // cascade is on the page.
+    if (previewModal) previewModal.hidden = true;
+    function closeModal() { if (previewModal) previewModal.hidden = true; }
+    if (previewClose) previewClose.addEventListener("click", closeModal);
+    if (previewModal) previewModal.addEventListener("click", function (e) { if (e.target === previewModal) closeModal(); });
+    // ESC key also closes the modal
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && previewModal && !previewModal.hidden) closeModal(); });
 
     function setStatus(text, kind) {
       if (!statusEl) return;

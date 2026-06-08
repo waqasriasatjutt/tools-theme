@@ -129,6 +129,9 @@
   z-index: 1000;
   padding: 20px;
 }
+/* Browser's default [hidden] rule is overridden by any explicit display:
+ * — bring it back explicitly so the modal stays hidden until the user opens it. */
+.p2w-preview-modal[hidden] { display: none !important; }
 .p2w-preview-inner {
   background: var(--bg);
   border-radius: var(--radius);
