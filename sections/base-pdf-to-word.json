@@ -1,0 +1,7 @@
+{
+  "name": "PDF to Word converter",
+  "slug": "base-pdf-to-word",
+  "category": "Base • Tools",
+  "sequence": 260,
+  "description": "Convert PDF files to editable Microsoft Word (.docx) documents in your browser. Multi-file batch, optional OCR for scanned PDFs, 100% client-side — files never leave your device."
+}
