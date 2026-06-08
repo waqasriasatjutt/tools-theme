@@ -1,0 +1,7 @@
+{
+  "name": "Hash generator (SHA-1 / SHA-256 / SHA-384 / SHA-512)",
+  "slug": "base-hasher",
+  "category": "Base • Tools",
+  "sequence": 240,
+  "description": "Generate cryptographic hashes for any text using the browser's SubtleCrypto. Output is hex."
+}

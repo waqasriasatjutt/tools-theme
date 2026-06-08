@@ -1,0 +1,7 @@
+{
+  "name": "URL encoder / decoder",
+  "slug": "base-url-encoder",
+  "category": "Base • Tools",
+  "sequence": 220,
+  "description": "Percent-encode special characters for URLs, or decode a URL back to readable text. Client-side."
+}

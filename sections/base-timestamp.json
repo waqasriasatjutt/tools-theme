@@ -1,0 +1,7 @@
+{
+  "name": "Timestamp converter",
+  "slug": "base-timestamp",
+  "category": "Base • Tools",
+  "sequence": 250,
+  "description": "Convert between Unix timestamp (seconds or ms), ISO 8601 and human-readable date/time. Type in any field and the others update automatically."
+}

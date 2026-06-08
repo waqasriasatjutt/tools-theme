@@ -1,0 +1,7 @@
+{
+  "name": "Base64 encoder / decoder",
+  "slug": "base-base64",
+  "category": "Base • Tools",
+  "sequence": 210,
+  "description": "Encode text to Base64 or decode Base64 back to text. Client-side, no upload."
+}

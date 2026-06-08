@@ -1,0 +1,7 @@
+{
+  "name": "JWT decoder",
+  "slug": "base-jwt-decoder",
+  "category": "Base • Tools",
+  "sequence": 230,
+  "description": "Paste a JSON Web Token and see its header and payload decoded. Signature is shown but not verified — all client-side."
+}
