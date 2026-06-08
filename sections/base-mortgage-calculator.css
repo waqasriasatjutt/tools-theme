@@ -1,0 +1,56 @@
+.mortgage-tool { padding: clamp(28px, 5vw, 56px) 0; }
+
+.mtg-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+@media (max-width: 760px) { .mtg-grid { grid-template-columns: 1fr; } }
+
+.mtg-inputs { display: flex; flex-direction: column; gap: 14px; }
+.mtg-row { display: flex; flex-direction: column; gap: 6px; }
+.mtg-row .tool-input {
+  padding: 10px 12px; font-size: 1rem; font: inherit;
+  background: var(--bg); color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  border-radius: 6px;
+}
+
+.mtg-summary { display: flex; flex-direction: column; gap: 12px; }
+.mtg-card {
+  padding: 18px 20px;
+  background: color-mix(in srgb, var(--bg) 95%, var(--text) 3%);
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+  border-radius: var(--radius);
+}
+.mtg-card-extra { background: color-mix(in srgb, #16a34a 8%, var(--bg)); border-color: color-mix(in srgb, #16a34a 30%, transparent); }
+.mtg-card-label { font-size: 0.86rem; color: var(--muted); margin-bottom: 4px; }
+.mtg-card-value { font-size: 1.6rem; font-weight: 700; color: var(--primary); }
+.mtg-card-sub { font-size: 0.88rem; color: var(--text); margin-top: 4px; }
+
+.mtg-schedule-wrap { margin-top: 28px; }
+.mtg-schedule-controls { margin-bottom: 12px; }
+.mtg-schedule {
+  max-height: 420px; overflow: auto;
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+  border-radius: calc(var(--radius) - 4px);
+}
+.mtg-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+.mtg-table th, .mtg-table td {
+  padding: 8px 12px; text-align: right;
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+}
+.mtg-table th:first-child, .mtg-table td:first-child { text-align: left; }
+.mtg-table thead { position: sticky; top: 0; background: color-mix(in srgb, var(--bg) 92%, var(--text) 4%); }
+.mtg-table th { font-weight: 700; }
+
+.mtg-info {
+  margin-top: 28px;
+  padding: 18px 22px;
+  background: color-mix(in srgb, var(--bg) 95%, var(--text) 3%);
+  border-left: 4px solid var(--primary);
+  border-radius: calc(var(--radius) - 4px);
+}
+.mtg-info p { margin: 8px 0; line-height: 1.55; }
+.mtg-info code {
+  background: color-mix(in srgb, var(--primary) 15%, transparent);
+  padding: 1px 6px; border-radius: 3px; font-size: 0.85em;
+}

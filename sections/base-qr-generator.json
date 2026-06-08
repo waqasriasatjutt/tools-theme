@@ -1,0 +1,7 @@
+{
+  "name": "QR code generator",
+  "slug": "base-qr-generator",
+  "category": "Base • Tools",
+  "sequence": 221,
+  "description": "Generate QR codes for text, URLs, WiFi, contact cards — download as PNG or SVG, in the browser."
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Image resizer / compressor / converter",
+  "slug": "base-image-tool",
+  "category": "Base • Tools",
+  "sequence": 220,
+  "description": "Resize, compress, or convert images (JPG / PNG / WEBP) right in the browser. 100% client-side — files never leave your device."
+}

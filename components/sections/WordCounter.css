@@ -1,0 +1,32 @@
+.word-tool { padding: clamp(28px, 5vw, 56px) 0; }
+
+.word-grid {
+  display: grid; grid-template-columns: 1fr 260px; gap: 24px;
+}
+@media (max-width: 760px) { .word-grid { grid-template-columns: 1fr; } }
+
+.word-stats {
+  display: flex; flex-direction: column; gap: 8px;
+  align-self: start;
+}
+.word-stat {
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--bg) 95%, var(--text) 3%);
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+  border-radius: calc(var(--radius) - 4px);
+}
+.word-stat-label { font-size: 0.82rem; color: var(--muted); }
+.word-stat-value { font-size: 1.3rem; font-weight: 700; color: var(--primary); }
+
+.word-info {
+  margin-top: 28px;
+  padding: 18px 22px;
+  background: color-mix(in srgb, var(--bg) 95%, var(--text) 3%);
+  border-left: 4px solid var(--primary);
+  border-radius: calc(var(--radius) - 4px);
+}
+.word-top { margin: 8px 0 0 22px; line-height: 1.6; }
+.word-top li code {
+  background: color-mix(in srgb, var(--primary) 15%, transparent);
+  padding: 1px 6px; border-radius: 3px; font-size: 0.88em;
+}

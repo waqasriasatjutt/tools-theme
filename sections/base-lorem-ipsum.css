@@ -1,0 +1,34 @@
+.lorem-tool { padding: clamp(28px, 5vw, 56px) 0; }
+
+.lorem-controls {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 14px 16px;
+  background: color-mix(in srgb, var(--bg) 95%, var(--text) 3%);
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+  border-radius: calc(var(--radius) - 4px);
+  margin-bottom: 14px;
+}
+.lorem-col { display: flex; flex-direction: column; gap: 4px; }
+.lorem-col-cb { justify-content: end; }
+.lorem-tool .tool-input {
+  width: 100%; padding: 8px 10px; font: inherit;
+  background: var(--bg); color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  border-radius: 6px;
+}
+.lorem-output {
+  margin-top: 14px;
+  padding: 18px 22px;
+  background: var(--bg);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: var(--radius);
+  min-height: 200px; line-height: 1.65;
+  white-space: pre-wrap;
+}
+.lorem-output:empty::before {
+  content: "Click Generate to produce placeholder text…";
+  color: var(--muted); font-style: italic;
+}
+.lorem-status { font-size: 0.88rem; color: var(--muted); }
+.lorem-status.is-ok { color: #16a34a; }

@@ -1,0 +1,7 @@
+{
+  "name": "Color picker / converter / palette",
+  "slug": "base-color-tool",
+  "category": "Base • Tools",
+  "sequence": 226,
+  "description": "Color picker with HEX ↔ RGB ↔ HSL conversion, contrast checker (WCAG), and palette generator."
+}

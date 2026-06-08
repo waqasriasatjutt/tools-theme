@@ -1,0 +1,7 @@
+{
+  "name": "Markdown ↔ HTML converter",
+  "slug": "base-markdown",
+  "category": "Base • Tools",
+  "sequence": 227,
+  "description": "Convert Markdown to HTML or HTML back to Markdown with live preview. Free, in-browser, no signup."
+}

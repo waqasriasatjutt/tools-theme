@@ -1,0 +1,7 @@
+{
+  "name": "Mortgage / loan calculator",
+  "slug": "base-mortgage-calculator",
+  "category": "Base • Tools",
+  "sequence": 222,
+  "description": "Mortgage / loan calculator with full amortization schedule, total interest paid, and extra-payment what-if."
+}
