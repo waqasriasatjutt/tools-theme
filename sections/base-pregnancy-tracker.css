@@ -1,0 +1,218 @@
+/* Pregnancy Tracker — Heavy-tier 3D + AI Q&A section */
+.pregnancy-tracker { padding: clamp(28px, 5vw, 56px) 0; }
+.pt-head { text-align: center; margin: 0 0 32px; }
+.pt-title { margin: 0 0 12px; }
+.pt-sub { margin: 0 auto; max-width: 720px; color: var(--muted); }
+
+.pt-section-title {
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid color-mix(in srgb, var(--primary) 30%, transparent);
+}
+.pt-h4 { margin: 14px 0 6px; font-size: 1rem; color: var(--primary); }
+.pt-mt { margin-top: 12px; }
+.pt-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+.pt-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  border-radius: calc(var(--radius) - 6px);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: var(--font-body, system-ui);
+}
+.pt-input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+/* ── Due date calculator ─────────────────────────────────── */
+.pt-calc-wrap { margin-bottom: 48px; }
+.pt-calc {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 2fr;
+  gap: 24px;
+  background: color-mix(in srgb, var(--bg) 92%, var(--text) 4%);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: var(--radius);
+  padding: clamp(16px, 3vw, 28px);
+}
+@media (max-width: 760px) {
+  .pt-calc { grid-template-columns: 1fr; }
+}
+.pt-calc-inputs { display: flex; flex-direction: column; }
+.pt-calc-actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.pt-calc-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+}
+.pt-result-card {
+  background: var(--bg);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: calc(var(--radius) - 4px);
+  padding: 16px;
+}
+.pt-result-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.pt-result-value {
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-display, system-ui);
+}
+
+/* ── Week-by-week explorer ───────────────────────────────── */
+.pt-explorer-wrap { margin-bottom: 48px; }
+.pt-week-selector {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: color-mix(in srgb, var(--bg) 92%, var(--text) 4%);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.pt-week-label { font-weight: 700; color: var(--primary); margin-right: 4px; }
+.pt-week-slider { flex: 1; min-width: 200px; accent-color: var(--primary); }
+.pt-week-input {
+  width: 72px; padding: 8px 10px;
+  border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  border-radius: 6px;
+  background: var(--bg); color: var(--text);
+  font-size: 1rem; text-align: center;
+}
+.pt-week-prev, .pt-week-next {
+  font-size: 1.3rem; line-height: 1; padding: 6px 14px;
+}
+
+.pt-explorer {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+@media (max-width: 760px) { .pt-explorer { grid-template-columns: 1fr; } }
+
+.pt-3d-wrap {
+  position: relative;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 8%, var(--bg)), color-mix(in srgb, var(--accent) 6%, var(--bg)));
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  max-height: 520px;
+}
+.pt-3d-canvas { position: absolute; inset: 0; }
+.pt-3d-canvas canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  cursor: grab;
+}
+.pt-3d-canvas canvas:active { cursor: grabbing; }
+.pt-3d-overlay {
+  position: absolute;
+  inset: auto 16px 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.pt-3d-week {
+  background: color-mix(in srgb, var(--primary) 90%, transparent);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.pt-info {
+  background: color-mix(in srgb, var(--bg) 92%, var(--text) 4%);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: var(--radius);
+  padding: clamp(16px, 3vw, 24px);
+}
+.pt-info-week { margin: 0 0 10px; color: var(--primary); }
+.pt-info p { margin: 6px 0; line-height: 1.55; }
+
+/* ── AI Q&A ──────────────────────────────────────────────── */
+.pt-qa-wrap { margin-bottom: 48px; }
+.pt-qa-intro { color: var(--muted); margin: 0 0 16px; }
+.pt-qa {
+  background: color-mix(in srgb, var(--bg) 92%, var(--text) 4%);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: var(--radius);
+  padding: clamp(16px, 3vw, 24px);
+}
+.pt-qa-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.pt-chip {
+  background: var(--bg);
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-family: inherit;
+}
+.pt-chip:hover { background: color-mix(in srgb, var(--primary) 8%, var(--bg)); }
+.pt-qa-input-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.pt-qa-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  border-radius: calc(var(--radius) - 6px);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+.pt-qa-thread { max-height: 400px; overflow-y: auto; }
+.pt-qa-msg {
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  line-height: 1.55;
+}
+.pt-qa-msg.pt-qa-q {
+  background: color-mix(in srgb, var(--primary) 12%, var(--bg));
+  border-left: 3px solid var(--primary);
+}
+.pt-qa-msg.pt-qa-a {
+  background: var(--bg);
+  border-left: 3px solid color-mix(in srgb, var(--text) 20%, transparent);
+}
+.pt-qa-msg-from { font-weight: 700; margin-bottom: 4px; font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* ── Disclaimer ──────────────────────────────────────────── */
+.pt-disclaimer {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: color-mix(in srgb, #f59e0b 12%, var(--bg));
+  border: 1px solid color-mix(in srgb, #f59e0b 35%, transparent);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.pt-disclaimer strong { color: #b45309; }

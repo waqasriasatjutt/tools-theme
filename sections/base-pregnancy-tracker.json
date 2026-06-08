@@ -1,0 +1,7 @@
+{
+  "name": "Pregnancy tracker (3D + AI Q&A)",
+  "slug": "base-pregnancy-tracker",
+  "category": "Base • Health",
+  "sequence": 300,
+  "description": "Calculate your due date and explore week-by-week pregnancy development with a 3D model, comprehensive milestone data, and an AI Q&A assistant. All client-side."
+}
